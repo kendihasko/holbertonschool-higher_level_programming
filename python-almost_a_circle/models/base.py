@@ -1,20 +1,16 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """
-
 Contains a Base class to manage
 the id attribute of all classes that extend
 from Base.
-
 """
+
 from os import path
 import json
 
-""" Private class attribute """
-
+# Private class attribute
 class Base:
     __nb_objects = 0
-
 
     def __init__(self, id=None):
         if id is not None:
