@@ -23,6 +23,6 @@ class Base:
             self.id = id
 
          # If id  not provided, increment and assign the new value to id
-            else:
-                Base.__nb_objects += 1
-                self.id = Base.__nb_objects
+         else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
