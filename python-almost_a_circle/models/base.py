@@ -14,15 +14,12 @@ class Base:
     '''
     This docstring describes the Base class.
     '''
- 
     __nb_objects = 0
 
     def __init__(self, id=None):
-
         if id is not None:
             # If id  provided, assign to public instance attribute id
             self.id = id
-
         else:
             Base.__nb_objects += 1
             # If id  not provided, increment and assign the new value to id
