@@ -103,14 +103,8 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """
-        ...
-        """
-        if self.__y > 0:
-            print('\n' * self.__y, end='')
-
-        for i in range(self.height):
-            if self.__x > 0:
-                print(' ' * self.__x, end='')
-
+        '''
+        Prints the Rectangle instance with the character # to stdout.
+        '''
+        for _ in range(self.__height):
             print('#' * self.__width)
