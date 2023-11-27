@@ -4,9 +4,9 @@
 from os import path
 import json
 
-"""
+'''
 Base class manages id attribute of all classes that extend from Base.
-"""
+'''
 
 
 class Base:
