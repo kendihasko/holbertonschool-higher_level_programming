@@ -40,12 +40,10 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, parameter_name):
         '''Setter method for width.'''
-        self.check_integer_parameter(value, 'width')
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        self.__width = value
+        self.check_integer_parameter(parameter_name, 'width')
+        self.__width = parameter_name
 
     @property
     def height(self):
@@ -53,12 +51,10 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, parameter_name):
         '''Setter method for height.'''
-        self.check_integer_parameter(value, 'height')
-        if value <= 0:
-            raise ValueError("height must be > 0")
-        self.__height = value
+        self.check_integer_parameter(parameter_name, 'height')
+        self.__height = parameter_name
 
     @property
     def x(self):
@@ -66,12 +62,10 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, value):
-        '''etter method for x.'''
-        self.check_integer_parameter(value, 'x')
-        if value < 0:
-            raise ValueError("x must be >= 0")
-        self.__x = value
+    def x(self, parameter_name):
+        '''Setter method for x.'''
+        self.check_integer_parameter(parameter_name, 'x')
+        self.__x = parameter_name
 
     @property
     def y(self):
@@ -79,12 +73,10 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, value):
+    def y(self, parameter_name):
         '''Setter method for y.'''
-        self.check_integer_parameter(value, 'y')
-        if value < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = value
+        self.check_integer_parameter(parameter_name, 'y')
+        self.__y = parameter_name
 
     def check_integer_parameter(self, value, parameter_name):
         '''
@@ -97,5 +89,11 @@ class Rectangle(Base):
         Raises:
             TypeError: If the value is not an integer.
         '''
-        if not isinstance(value, int):
-            raise TypeError(f"{parameter_name} must be an integer")
+        if type(value) is not int:
+            raise TypeError(parameter_name + ' must be an integer')
+
+        if value <= 0 and parameter_name in ('width', 'height'):
+            raise ValueError(parameter_name + ' must be > 0')
+
+        if value < 0 and parameter_name in ('x', 'y'):
+            raise ValueError(parameter_name + ' must be >= 0')
