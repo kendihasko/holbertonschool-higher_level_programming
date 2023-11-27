@@ -13,6 +13,10 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        ...
+        """
+
         if id is not None:
             # If id  provided, assign to public instance attribute id
             self.id = id
