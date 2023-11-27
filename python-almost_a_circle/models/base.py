@@ -17,7 +17,7 @@ class Base:
     def __init__(self, id=None):
         if id is not None:
             # If id  provided, assign to public instance attribute id
-            self.id = id  
+            self.id = id
 
         else:
             Base.__nb_objects += 1
