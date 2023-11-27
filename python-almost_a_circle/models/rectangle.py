@@ -43,6 +43,8 @@ class Rectangle(Base):
     def width(self, value):
         '''Setter method for width.'''
         self.check_integer_parameter(value, 'width')
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -54,6 +56,8 @@ class Rectangle(Base):
     def height(self, value):
         '''Setter method for height.'''
         self.check_integer_parameter(value, 'height')
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -65,6 +69,8 @@ class Rectangle(Base):
     def x(self, value):
         '''etter method for x.'''
         self.check_integer_parameter(value, 'x')
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -74,8 +80,10 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        '''etter method for y.'''
+        '''Setter method for y.'''
         self.check_integer_parameter(value, 'y')
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def check_integer_parameter(self, value, parameter_name):
