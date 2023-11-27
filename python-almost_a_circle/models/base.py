@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-# Importing libraries
-from os import path
-import json
-
 '''
 Base class manages id attribute of all classes that extend from Base.
 '''
+
+# Importing libraries
+from os import path
+import json
 
 
 class Base:
