@@ -121,6 +121,7 @@ class Rectangle(Base):
                 f'[Rectangle] ({self.id}) '
                 f'{self.__x}/{self.__y} - {self.__width}/{self.__height}'
         )
+
     def update(self, *args):
         '''
         Assigns an argument to each attribute.
@@ -128,6 +129,7 @@ class Rectangle(Base):
         Args:
             *args: Arguments to be assigned in order (id, width, height, x, y).
         '''
+
         if args:
             if len(args) >= 1:
                 self.id = args[0]
