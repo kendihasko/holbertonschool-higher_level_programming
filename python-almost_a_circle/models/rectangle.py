@@ -125,7 +125,6 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         '''
         Assigns key/value argument to attributes.
-
         Args:
             *args: Arguments to be assigned in order (id, width, height, x, y).
             **kwargs: Key/value arguments to be assigned.
