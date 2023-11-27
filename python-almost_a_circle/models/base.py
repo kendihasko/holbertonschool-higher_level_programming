@@ -24,4 +24,3 @@ class Base:
             Base.__nb_objects += 1
             # If id  not provided, increment and assign the new value to id
             self.id = Base.__nb_objects
-            
