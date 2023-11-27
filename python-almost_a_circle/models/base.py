@@ -8,6 +8,7 @@ This module provides the Base class for managing the id attribute.
 from os import path
 import json
 
+
 class Base:
     '''
     This docstring describes the Base class.
@@ -23,3 +24,4 @@ class Base:
             Base.__nb_objects += 1
             # If id  not provided, increment and assign the new value to id
             self.id = Base.__nb_objects
+            
