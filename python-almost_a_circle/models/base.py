@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 '''
-Base class to manage
-the id attribute of all classes that extend
-from Base
+This module provides the Base class for managing the id attribute.
 '''
 
 # Importing libraries
@@ -14,6 +12,7 @@ class Base:
     '''
     This docstring describes the Base class.
     '''
+
     __nb_objects = 0
 
     def __init__(self, id=None):
