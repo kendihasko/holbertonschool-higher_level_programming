@@ -10,11 +10,10 @@ from Base
 from os import path
 import json
 
-'''
-Base class
-'''
-
 class Base:
+    '''
+    This docstring describes the Base class.
+    '''
  
     __nb_objects = 0
 
