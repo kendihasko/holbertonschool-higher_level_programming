@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 '''
-Base class manages id attribute of all classes that extend from Base.
+Base class to manage
+the id attribute of all classes that extend
+from Base
 '''
 
 # Importing libraries
@@ -9,11 +11,12 @@ from os import path
 import json
 
 
-'''
-Base class manages id attribute of all classes that extend from Base.
-'''
-
 class Base:
+    
+    '''
+    Base class
+    '''
+    
     __nb_objects = 0
 
     def __init__(self, id=None):
