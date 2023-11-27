@@ -114,3 +114,4 @@ class Rectangle(Base):
                 print(' ' * self.__x, end='')
 
             print('#' * self.__width)
+            
