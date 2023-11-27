@@ -113,6 +113,7 @@ class Rectangle(Base):
             print(' ' * self.__x, end='')
             print('#' * self.__width)
 
+
     def __str__(self):
         '''
         Returns a string representation of the Rectangle instance.
