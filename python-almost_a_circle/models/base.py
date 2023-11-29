@@ -34,19 +34,13 @@ This docstring describes the Base class.
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Writes the JSON string representation of list_objs to a file."""
-        filename = cls.__name__ + ".json"
+        '''Writes the JSON string representation of list_objs to a file.'''
+    filename = cls.__name__ + '.json'
 
-        json_string = "[]"
+        with open(filename, mode='w', encoding='utf-8') as f:
+            if list_objs is None:
+                return f.write(cls.to_json_string([]))
 
-        if list_objs is not None:
-            json_string = cls.to_json_string(
-               [obj.to_dictionary() for obj in list_objs]
-            )
+            json_attrs = [obj.to_dictionary() for obj in list_objs]
 
-        json_string = cls.to_json_string(
-           [obj.to_dictionary() for obj in list_objs]
-           )
-
-        with open(filename, 'w') as file:
-            file.write(json_string)
+            return f.write(cls.to_json_string(json_attrs))
