@@ -31,7 +31,7 @@ This docstring describes the Base class.
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
- 
+
     @classmethod
     def save_to_file(cls, list_objs):
         '''Writes the JSON string representation of list_objs to a file.'''
