@@ -96,6 +96,8 @@ This docstring describes the Base class.
             json_string = file.read()
             dictionaries_list = cls.from_json_string(json_string)
 
-            instances_list = [cls.create(**dictionary) for dictionary in dictionaries_list]
+            instances_list = [
+                cls.create(**dictionary) for dictionary in dictionaries_list
+            ]
 
         return instances_list
