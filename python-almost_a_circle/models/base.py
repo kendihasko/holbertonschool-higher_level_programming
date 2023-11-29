@@ -46,7 +46,7 @@ class Base:
 
         Description:
             Writes the JSON string representation of the instances in the
-            list_objs to a file. If list_objs=None, it writes an empty list ("[]")
+            list_objs to a file. If list_objs=None, writes an empty list ("[]")
             as a string to ensure that the file exists & contains valid JSON
             syntax, even if there are no instances to serialize.
 
