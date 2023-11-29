@@ -40,9 +40,7 @@ class Base:
     with open(filename, mode='w', encoding='utf-8') as f:
         if list_objs is None:
             return f.write(cls.to_json_string([]))
-            '''...'''
 
         json_attrs = [obj.to_dictionary() for obj in list_objs]
 
         return f.write(cls.to_json_string(json_attrs))
-        '''...'''
