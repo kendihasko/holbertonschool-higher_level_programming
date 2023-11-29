@@ -83,3 +83,19 @@ This docstring describes the Base class.
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances from a JSON file."""
+        filename = cls.__name__ + '.json'
+
+        if not path.exists(filename):
+            return []
+
+        with open(filename, 'r', encoding='utf-8') as file:
+            json_string = file.read()
+            dictionaries_list = cls.from_json_string(json_string)
+
+            instances_list = [cls.create(**dictionary) for dictionary in dictionaries_list]
+
+        return instances_list
