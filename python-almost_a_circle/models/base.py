@@ -38,20 +38,20 @@ class Base:
         Writes the JSON string representation of list_objs to a file.
 
         Args:
-            cls (class): The class itself, used to access class-level methods and attributes.
+            cls (class): Used to access class-level methods and attributes.
             list_objs (list): List of instances that inherit from the class.
 
         Returns:
             int: The number of characters written to the file.
 
         Description:
-            This method writes the JSON string representation of the instances in the
-            list_objs to a file. If list_objs is None, it writes an empty list ("[]")
-            as a JSON string to ensure that the file exists and contains valid JSON
+            Writes the JSON string representation of the instances in the
+            list_objs to a file. If list_objs=None, it writes an empty list ("[]")
+            as a string to ensure that the file exists & contains valid JSON
             syntax, even if there are no instances to serialize.
 
             Note:
-            If list_objs is None, an empty list is passed to cls.to_json_string([])
+            If list_objs=None, an empty list's passed to cls.to_json_string([])
             to ensure proper handling of edge cases.
         '''
         filename = cls.__name__ + '.json'
