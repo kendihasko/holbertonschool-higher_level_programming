@@ -10,9 +10,9 @@ import json
 
 
 class Base:
-    '''
+'''
 This docstring describes the Base class.
-    '''
+'''
 
     __nb_objects = 0
 
