@@ -24,3 +24,10 @@ This docstring describes the Base class.
             Base.__nb_objects += 1
             # If id  not provided, increment and assign the new value to id
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        '''Returns the JSON string representation of list_dictionaries.'''
+        if list_dictionaries is None or not list_dictionaries:
+            return "[]"
+        return json.dumps(list_dictionaries)
