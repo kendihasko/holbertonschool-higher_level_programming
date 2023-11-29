@@ -11,7 +11,7 @@ import json
 
 class Base:
     '''
-    This docstring describes the Base class.
+This docstring describes the Base class.
     '''
 
     __nb_objects = 0
@@ -63,3 +63,10 @@ class Base:
             json_attrs = [obj.to_dictionary() for obj in list_objs]
 
             return f.write(cls.to_json_string(json_attrs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string."""
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)
