@@ -4,7 +4,7 @@
 This module provides the Square class, which inherits from Rectangle.
 '''
 
-#Inherits from rectangle
+#Inherits from Rectangle
 from rectangle import Rectangle
 
 
