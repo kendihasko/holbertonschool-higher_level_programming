@@ -4,13 +4,12 @@
 This module provides the Square class, which inherits from Rectangle.
 '''
 
-#Inherits from Rectangle
 from rectangle import Rectangle
 
 
 class Square(Rectangle):
     '''
-    Square class inherits from Rectangle.
+Square class inherits from Rectangle.
     '''
 
     def __init__(self, size, x=0, y=0, id=None):
