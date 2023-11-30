@@ -4,7 +4,6 @@
 This module provides the Rectangle class, which inherits from Base.
 '''
 
-#Inherits from Base
 from base import Base
 
 
