@@ -150,3 +150,4 @@ class TestSquare(unittest.TestCase):
         square_dict = square_instance.to_dictionary()
         expected = {'id': 5, 'x': 5, 'size': 5, 'y': 5}
         self.assertEqual(square_dict, expected)
+
