@@ -6,6 +6,9 @@ This module provides the Rectangle class, which inherits from Base.
 
 from models.base import Base
 
+'''
+This module provides the Rectangle class, which inherits from Base.
+'''
 
 class Rectangle(Base):
     '''
