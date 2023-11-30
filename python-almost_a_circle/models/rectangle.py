@@ -5,7 +5,7 @@ This module provides the Rectangle class, which inherits from Base.
 '''
 
 #Inherits from Base
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
