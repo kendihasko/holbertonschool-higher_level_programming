@@ -6,9 +6,9 @@ of the Base class
 import unittest
 import pep8
 import os
-from models.base import Base
-from models.rectangle import Rectangle
-from models.square import Square
+from test_models.test_base import Base
+from test_models.test_rectangle import Rectangle
+from test_models.test_square import Square
 
 
 class TestBase(unittest.TestCase):
